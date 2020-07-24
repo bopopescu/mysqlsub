@@ -27,7 +27,7 @@ class TestSource(unittest.TestCase):
 
     def testName(self):
         self._source.connect()
-        self._source.show_master_status()
+        self._source.show_main_status()
         pass
 
 

@@ -340,7 +340,7 @@ class QueryEvent(BinLogEvent):
         super(QueryEvent, self).__init__(from_packet, event_size, table_map, ctl_connection)
 
         # Post-header
-        self.slave_proxy_id = self.packet.read_uint32()
+        self.subordinate_proxy_id = self.packet.read_uint32()
         self.execution_time = self.packet.read_uint32()
         self.schema_length =  byte2int(self.packet.read(1))
         self.error_code = self.packet.read_uint16()

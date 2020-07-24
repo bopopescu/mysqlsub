@@ -59,8 +59,8 @@ class Source(object):
         self._conn.close()
         self._socket = None
 
-    def show_master_status(self):
-        res, _ = self._query("show master status;")
+    def show_main_status(self):
+        res, _ = self._query("show main status;")
         print res
         return res[0]
     
